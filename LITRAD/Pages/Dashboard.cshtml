@@ -1,0 +1,126 @@
+﻿@page
+@{
+    ViewData["Title"] = "Dashboard";
+}
+<h2>@ViewData["Title"]</h2>
+<div class="container">
+    <div class="quarter">
+        <h3>
+            Data basics
+        </h3>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Range to pull data from:</p>
+                <form>
+                    From
+                    <input id="datefield1" type="date" name="from" max="2018-13-13">
+                    To
+                    <input id="datefield2" type="date" name="to" max="2018-13-13">
+                    <script>
+                        var today = new Date();
+                        var dd = today.getDate();
+                        var mm = today.getMonth() + 1; //January is 0!
+                        var yyyy = today.getFullYear();
+                        if (dd < 10) {
+                            dd = '0' + dd
+                        }
+                        if (mm < 10) {
+                            mm = '0' + mm
+                        }
+
+                        today = yyyy + '-' + mm + '-' + dd;
+                        document.getElementById("datefield1").setAttribute("max", today);
+                        document.getElementById("datefield2").setAttribute("max", today);
+                    </script>
+                    <p> Select laser to view tests from</p>
+                    <input type="checkbox" name="laser1" value="Padawan"> Padawan<br>
+                    <input type="checkbox" name="laser2" value="Cutlass"> Cutlas<br>
+                    <input type="checkbox" name="laser3" value="Venona"> Venona<br>
+                    <input type="checkbox" name="laser4" value="SuperCuts"> SuperCuts<br>
+                    <input type="checkbox" name="laser5" value="Other"> Other<br>
+                    <p> Select items you wish to display</p>
+                    <input type="checkbox" name="view1" value="Graph"> Graph<br>
+                    <input type="checkbox" name="view2" value="Piechart"> Piechart<br>
+                    <input type="checkbox" name="view3" value="Bars"> Pass/Fail/Skip bars<br>
+                    <input type="checkbox" name="view4" value="Opt4"> Chart option 4<br>
+                    <input type="checkbox" name="view5" value="Other"> Other<br>
+                    <br>
+                    <button> Apply selections</button>
+                </form>
+            </div>
+        </div>
+        <div id="myBtn" style="border:none;background:none;">Change Display/Data Selection</div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById('myModal');
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+        <div class="nav-item">Export to PDF</div>
+        <div class="nav-item">Import Test Data</div>
+        <a class="nav-item" href="Manual_test.html" target="_blank">Run Manual Test</a>
+    </div> <!-- End Left Column -->
+
+    <div class="threequarter">
+        <!-- Right Column -->
+        <!--<h2 class="text-grey padding-16">Results of data</h2>-->
+        <h3 class="opacity"><b>Graph of data</b></h3>
+        <img src="~/images/graph.png" style="width:100%" alt="Graph">
+        <form>
+            <p> What data on graph?</p>
+            <select name="graphData">
+                <option value="Fail">Fail vs Time</option>
+                <option value="Skip">Skip vs Time</option>
+                <option value="Pass">Pass vs Time</option>
+                <option value="Ftest">Fail by test</option>
+                <option value="Flaser">Fail by laser</option>
+            </select>
+            <p> Graph Type</p>
+            <select name="graphType">
+                <option value="Bar">Bar</option>
+                <option value="Line">Line</option>
+                <option value="Scatterplot">Scatterplot</option>
+                <option value="Histogram">Histogram</option>
+            </select>
+            <br>
+            <br>
+            <button> Apply selections</button>
+        </form>
+        <h3 class="opacity"><b>Piechart of data</b></h3>
+        <img src="~/images/pie.png" style="width:100%" alt="Pie">
+        <p> What data on piechart?</p>
+        <select name="graphData">
+            <option value="Ratio">Fails/Skip/Pass ratios</option>
+            <option value="Fails">Fails by reason</option>
+            <option value="Skips">Skips by reason</option>
+        </select>
+        <br>
+        <br>
+        <button> Apply selections</button>
+
+    </div><!-- End Right Column -->
+</div>

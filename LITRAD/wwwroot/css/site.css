@@ -1,0 +1,219 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+.Line {
+    border-top: 1px solid #CCC;
+    padding: 5px;
+    margin-top: 10px;
+}
+.col, .half, .third, .twothird, .threequarter, .quarter {
+    float: left;
+    width: 100%
+}
+
+    .col.s1 {
+        width: 8.33333%
+    }
+
+    .col.s2 {
+        width: 16.66666%
+    }
+
+    .col.s3 {
+        width: 24.99999%
+    }
+
+    .col.s4 {
+        width: 33.33333%
+    }
+
+    .col.s5 {
+        width: 41.66666%
+    }
+
+    .col.s6 {
+        width: 49.99999%
+    }
+
+    .col.s7 {
+        width: 58.33333%
+    }
+
+    .col.s8 {
+        width: 66.66666%
+    }
+
+    .col.s9 {
+        width: 74.99999%
+    }
+
+    .col.s10 {
+        width: 83.33333%
+    }
+
+    .col.s11 {
+        width: 91.66666%
+    }
+
+    .col.s12 {
+        width: 99.99999%
+    }
+
+@media (min-width:601px) {
+    .col.m1 {
+        width: 8.33333%
+    }
+
+    .col.m2 {
+        width: 16.66666%
+    }
+
+    .col.m3, .quarter {
+        width: 24.99999%
+    }
+
+    .col.m4, .third {
+        width: 33.33333%
+    }
+
+    .col.m5 {
+        width: 41.66666%
+    }
+
+    .col.m6, .half {
+        width: 49.99999%
+    }
+
+    .col.m7 {
+        width: 58.33333%
+    }
+
+    .col.m8, .twothird {
+        width: 66.66666%
+    }
+
+    .col.m9, .threequarter {
+        width: 74.99999%
+    }
+
+    .col.m10 {
+        width: 83.33333%
+    }
+
+    .col.m11 {
+        width: 91.66666%
+    }
+
+    .col.m12 {
+        width: 99.99999%
+    }
+}
+
+@media (min-width:993px) {
+    .col.l1 {
+        width: 8.33333%
+    }
+
+    .col.l2 {
+        width: 16.66666%
+    }
+
+    .col.l3 {
+        width: 24.99999%
+    }
+
+    .col.l4 {
+        width: 33.33333%
+    }
+
+    .col.l5 {
+        width: 41.66666%
+    }
+
+    .col.l6 {
+        width: 49.99999%
+    }
+
+    .col.l7 {
+        width: 58.33333%
+    }
+
+    .col.l8 {
+        width: 66.66666%
+    }
+
+    .col.l9 {
+        width: 74.99999%
+    }
+
+    .col.l10 {
+        width: 83.33333%
+    }
+
+    .col.l11 {
+        width: 91.66666%
+    }
+
+    .col.l12 {
+        width: 99.99999%
+    }
+}
+
+.row-padding, .row-padding > .half, .row-padding > .third, .row-padding > .twothird, .row-padding > .threequarter, .row-padding > .quarter, .row-padding > .col {
+    padding: 0 8px
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #140a4e;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover, .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+}
